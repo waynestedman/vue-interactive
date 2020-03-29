@@ -1,24 +1,25 @@
 {
-  "name": "givingasst",
+  "name": "vue-interactive",
   "version": "0.0.1",
-  "description": "Giving Assistant Senior Frontend challenge",
+  "description": "Interactive module built with Vue.JS",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/waynestedman/giving-asst.git"
+    "url": "https://github.com/waynestedman/vue-interactive.git"
   },
   "author": "Wayne Stedman",
-  "license": "ISC",
+  "license": "MIT",
   "keywords": [
     "gulp",
     "vue.js",
     "html",
     "css",
     "javascript",
-    "giving assistant"
+    "bootstrap"
   ],
   "devDependencies": {
-    "autoprefixer": "^9.7.0",
+    "@popperjs/core": "^2.1.1",
+    "autoprefixer": "^9.7.5",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
