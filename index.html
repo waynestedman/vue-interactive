@@ -20,7 +20,12 @@
       <h1>VueJs Interative module</h1>
     </header>
     <main id="app">
-
+      <section class="left">
+        <ul>
+          <li v-for="sign in signs">{{ sign.text }}</li>
+        </ul>
+      </section>
+      <section class="right"></section>
     </main> <!-- main -->
 
     <script src="./dist/js/scripts.js"></script>

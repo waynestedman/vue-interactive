@@ -4,3 +4,34 @@ header {
   text-align: center;
 } // header
 
+main {
+  background-color: $ice-green;
+
+  .left {
+    display: inline-block;
+    margin: 1rem;
+    width: 48%;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        margin: 1rem;
+        padding: .5rem;
+        border-radius: 10px;
+        background-color: $ga-umber-dark;
+
+        &:hover {
+          @include mdc-dropshadow;
+          
+        }
+      }
+    }
+    
+  }
+  .right {
+    display: inline-block;
+    margin: 1rem;
+    width: 48%;
+  }
+}
