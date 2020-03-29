@@ -1,0 +1,28 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 10) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Media Queries
+@mixin desktop {
+	@media only screen and (min-width: 1025px) {
+		@content;
+	}
+} // desktop
+
+@mixin tablet {
+	@media only screen and (max-width: 1024px) and (min-width: 768px) {
+		@content;
+	}
+} // tablet
+
+@mixin mobile {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+} // mobile
+
+@mixin mdc-dropshadow {
+	box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}

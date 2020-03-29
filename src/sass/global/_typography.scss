@@ -1,0 +1,52 @@
+/* General type settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: $text-color;
+} // headings and 
+
+p, button {
+  font-family: $base-font;
+  color: $text-color;
+} // body text
+
+h1 {
+  @include font-size(3.052);
+  margin: 4rem auto .5rem auto;
+} // H1 specifics
+
+h2 {
+  @include font-size(2.441);
+} // H2 specifics
+
+h3 {
+  @include font-size(1.953);
+} // H3 specifics
+
+h4 {
+  @include font-size(1.563);
+} // H4 specifics
+
+h5 {
+  @include font-size(1.25);
+} // H5 specifics
+
+p, button {
+  @include font-size(1);
+} // body text
+
+/* Element Specific settings */
+.material-icons {
+  // font-size: 24px;  /* Preferred icon size */
+  font-size: 72px;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

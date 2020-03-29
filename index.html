@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giving Assistant Senior Frontend Challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Sen:400,700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/bootstrap.min.css">
+    <script src="./dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/styles.css" />
+
+    <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101242074);</script>
+    <script async src="//static.getclicky.com/js"></script>
+  </head>
+  <body>
+    <header>
+      <img src="./dist/assets/giving-assistant-logo.svg" alt="Giving Assistant logo">
+      <h1>Giving Assistant Senior Frontend Challenge</h1>
+      <h4>by Wayne Stedman</h4>
+      <button type="button" class="modal-button btn btn-info btn-lg" data-toggle="modal" data-target="#infoModal">Open the Modal</button>
+    </header>
+    <main class="modal fade" id="infoModal" role="dialog">
+      <div class="modal-dialog modal-content">
+        <div class="modal-header">
+          <h2>Important Information</h2>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div> <!-- modal header -->
+        <div class="modal-main">
+          <section id="couponCode" class="modal-body active" v-for="store in stores">
+            <img :src="store.logo" :alt="store.alt">
+            <h3>{{ store.name }} Coupon Code Info</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolore harum commodi sunt necessitatibus accusantium quisquam natus dicta odit quibusdam quidem. Laudantium deserunt iste ea fugiat, cupiditate facere enim earum.</p>
+            <div class="coupon-box" role="group" aria-label="First group">
+              <input type="text" :value="store.coupon" id="couponCode"></input>
+              <button onClick="copyToClipboard()" type="submit" class="btn btn-primary">Copy to Clipboard</button>
+            </div>
+          </section> <!-- left side of modal -->
+          <section id="emailSub" class="modal-body">
+            <i class="material-icons">mail_outline</i>
+            <h3>Subscribe to our email list</h3>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li>Necessitatibus accusantium quisquam dicta odit quibusdam quidem.</li>
+              <li>Laudantium deserunt iste ea fugiat, cupiditate facere enim earum.</li>
+            </ul>
+            <form action="./dist/email-validator.php" method="POST" target="_blank">
+              <div class="form-group">
+                <!-- <label for="inputEmail">Email address</label> -->
+                <input type="email" class="form-control" id="inputEmail" name="emails[]" aria-describedby="emailHelp" placeholder="Email address">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="error">
+
+            </div>
+          </section> <!-- right side of modal -->
+        </div> <!-- modal main -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default close" data-dismiss="modal">Close</button>
+        </div> <!-- modal footer -->
+      </div> <!-- modal-dialog = wrapper -->
+    </main> <!-- main - Modal -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./dist/js/scripts.js"></script>
+  </body>
+</html>
